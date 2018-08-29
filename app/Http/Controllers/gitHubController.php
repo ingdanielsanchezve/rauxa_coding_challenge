@@ -10,14 +10,11 @@ class gitHubController extends Controller
 {
     static function makeGitHubRequest($url)
     {
-        $ch = curl_init();
-        $access = 'ingdanielsanchezve:25e6c09305e04529787dc430de475e5196b01c32';
-        
+        $ch = curl_init();        
         curl_setopt($ch, CURLOPT_URL, $url);
-        //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/xml'));
         curl_setopt($ch, CURLOPT_USERAGENT, 'Agent smith');
         curl_setopt($ch, CURLOPT_HEADER, 0);
-        curl_setopt($ch, CURLOPT_USERPWD, $access);
+        curl_setopt($ch, CURLOPT_USERPWD, env('GITHUB_USER').':'.env('GITHUB_TOKEN'));
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);

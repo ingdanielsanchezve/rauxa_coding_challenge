@@ -114,7 +114,13 @@
                   </div>
                   <div class="x_content">
 
-                    <div class="alert alert-danger alert-dismissible fade in" role="alert" ng-if="err">
+                    <div class="alert alert-success alert-dismissible fade in" role="alert" ng-if="searching">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                          </button>
+                          <strong>Searching!</strong> we are looking for the GitHub user data. <i class="fa fa-rocket"></i>
+                    </div>
+
+                    <div class="alert alert-primary alert-dismissible fade in" role="alert" ng-if="err">
                           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
                           </button>
                           <strong>{{err.message}}!</strong> the user you try to find does not exist, please try again.
@@ -151,11 +157,20 @@
                     <div class="col-md-9 col-sm-9 col-xs-12">
                       <div class="row">
 
+                        <div class="alert alert-success alert-dismissible fade in" role="alert" ng-if="searchingFollowers">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                              </button>
+                              <strong>Searching!</strong> we are looking for the user followers data. <i class="fa fa-people"></i>
+                        </div>
+
                         <div class="col-md-12 col-sm-12 col-xs-12 text-center">
                           <ul class="pagination pagination-split">
 
                               <li ng-repeat-n="{{pages}}" ng-if="pages > 0">
                                 <a href="#" ng-click="getFollowers($index + 1)">{{$index + 1}}</a>
+                              </li>
+                              <li ng-if="totPages > maxPages">
+                                <a href="#" ng-click="getMoreFollowersPages(pagesShown)"> More + </a>
                               </li>
 
                           </ul>

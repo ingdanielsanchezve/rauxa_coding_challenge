@@ -7,6 +7,10 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
         sec.pages = 0;
         sec.followers = [];        
         sec.searching = false;
+        sec.searchingFollowers = false;
+        sec.maxPages = 16;
+        sec.pagesShown = 16;
+        sec.actualPage = 0;
 
     sec.searchGitHub = function() {      
         
@@ -16,14 +20,14 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
               .then(function (response) {
                     sec.searching = false;
                     if ('user' in response.data) {                        
-                        sec.user = response.data.user;
+                        sec.user      = response.data.user;
                         sec.followers = response.data.followers;
-                        sec.pages = response.data.pages;
+                        sec.totPages  = response.data.pages;
+                        sec.pages     = (response.data.pages > sec.maxPages) ? sec.maxPages : response.data.pages;
                     }else{
                         sec.err = response.data;
                         sec.clearData();
                     }
-
         });
     }
 
@@ -45,11 +49,17 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
             sec.searchGitHubSelected(sec.username);
     }
 
+    sec.getMoreFollowersPages = function(){
+        sec.pagesShown++;
+        sec.getFollowers(sec.pagesShown);
+    }
+
     sec.getFollowers = function (page) {
-        sec.searching = true;
+        sec.searchingFollowers = true;
+        sec.followers = '';
         GitHub.getFollowers(sec.username, page)
             .then(function (response) {
-                sec.searching = false;
+                sec.searchingFollowers = false;
                 sec.followers = response.data.followers;
             });
     };
