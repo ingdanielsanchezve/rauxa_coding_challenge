@@ -44,6 +44,7 @@ class gitHubController extends Controller
     function getGitHubUser($user)
     {
         // VagrantStory
+        // guisehn
         $user_info = self::makeGitHubRequest("https://api.github.com/users/$user");
 
         if (array_key_exists('id', $user_info)) {            

@@ -8,10 +8,19 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
         sec.followers = [];        
         sec.searching = false;
         sec.searchingFollowers = false;
-        sec.maxPages = 16;
-        sec.pagesShown = 16;
-        sec.actualPage = 0;
+        sec.maxPages = 10;
+        sec.pagesShown = 10;
+        sec.firstPage = 1;
         sec.err = '';
+
+    sec.range = function () {
+            var input = [];
+            sec.paginatorPages = (sec.pagesShown > sec.maxPages) ? sec.pagesShown : sec.pages;
+            for (var i = sec.firstPage; i <= sec.paginatorPages; i++) {
+                input.push(i);
+            }
+            return input;
+    };
 
     sec.searchGitHub = function() {      
         
@@ -37,6 +46,7 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
         sec.user = '';
         sec.followers = '';
         sec.pages = 0;
+        sec.pagesShown = 10;
     }
 
     sec.searchGitHubSelected = function(user) {
@@ -53,6 +63,7 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
 
     sec.getMoreFollowersPages = function(){
         sec.pagesShown++;
+        // sec.firstPage = sec.pagesShown - sec.maxPages;
         sec.getFollowers(sec.pagesShown);
     }
 

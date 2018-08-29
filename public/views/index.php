@@ -120,7 +120,7 @@
                           <strong>Searching!</strong> we are looking for the GitHub user data. <i class="fa fa-rocket"></i>
                     </div>
 
-                    <div class="alert alert-primary alert-dismissible fade in" role="alert" ng-if="err">
+                    <div class="alert alert-danger alert-dismissible fade in" role="alert" ng-if="err">
                           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
                           </button>
                           <strong>{{err.message}}!</strong> the user you try to find does not exist, please try again.
@@ -146,6 +146,7 @@
                         <li ng-if="user.location"><i class="fa fa-map-marker user-profile-icon"></i> {{user.location}} </li>
 
                         <li ng-if="user.bio"> <i class="fa fa-briefcase user-profile-icon"></i> {{user.bio}} </li>
+                        <li ng-if="user.followers"> <i class="fa fa-group user-profile-icon"></i> <strong>{{user.followers}}</strong> Followers </li>
 
                         <li class="m-top-xs" ng-if="user.blog">
                           <i class="fa fa-external-link user-profile-icon"></i>
@@ -163,10 +164,10 @@
                               <strong>Searching!</strong> we are looking for the user followers data. <i class="fa fa-people"></i>
                         </div>
 
-                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center" ng-if="user.followers > 30">
                           <ul class="pagination pagination-split">
 
-                              <li ng-repeat-n="{{pages}}" ng-if="pages > 0">
+                              <li ng-repeat="n in range()" ng-if="pages > 0">
                                 <a href="#" ng-click="getFollowers($index + 1)">{{$index + 1}}</a>
                               </li>
                               <li ng-if="totPages > maxPages && !searching">
@@ -191,12 +192,12 @@
                               </div>
                             </div>
                             <div class="col-xs-12 bottom text-center">
-                              <div class="col-xs-12 col-sm-6 emphasis">
+                              <div class="col-xs-12 col-sm-5 emphasis">
                                 <a type="button" class="btn btn-success btn-xs" ng-click="searchGitHubSelected(follower.login)">
                                   <i class="fa fa-search"> </i> View Profile
                                 </a>
                               </div>
-                              <div class="col-xs-12 col-sm-6 emphasis">
+                              <div class="col-xs-12 col-sm-5 emphasis">
                                 <a type="button" class="btn btn-primary btn-xs" target="_blank" ng-href="{{follower.html_url}}">
                                   <i class="fa fa-github"> </i> View on GitHub
                                 </a>
