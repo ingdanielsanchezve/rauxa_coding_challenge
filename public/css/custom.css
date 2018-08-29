@@ -218,7 +218,8 @@ body .container.body .right_col {
   }
   .nav-md .container.body .right_col {
     width: 100%;
-    padding-right: 0
+    padding-right: 0;
+    min-height: 600px;
   }
   .right_col {
     padding: 10px !important;
