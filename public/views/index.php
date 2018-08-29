@@ -169,7 +169,7 @@
                               <li ng-repeat-n="{{pages}}" ng-if="pages > 0">
                                 <a href="#" ng-click="getFollowers($index + 1)">{{$index + 1}}</a>
                               </li>
-                              <li ng-if="totPages > maxPages">
+                              <li ng-if="totPages > maxPages && !searching">
                                 <a href="#" ng-click="getMoreFollowersPages(pagesShown)"> More + </a>
                               </li>
 

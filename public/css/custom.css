@@ -200,8 +200,6 @@ body .container.body .right_col {
 .nav-md .container.body .right_col {
   padding: 10px 20px 0;
   margin-left: 230px;
-  min-height: 630px;
-  max-height: 630px;
 }
 .nav_title {
   width: 230px;
@@ -820,9 +818,7 @@ h2 {
   background: #F2F5F7;
 }
 .x_panel {
-  position: relative;
-  overflow: hidden;
-  max-height: 505px;
+  position: relative;  
   width: 100%;
   margin-bottom: 10px;
   padding: 10px 17px;
@@ -1585,6 +1581,14 @@ span.right {
 @media (min-width:768px) {
   .tile_count .tile_stats_count span {
     font-size: 13px;
+  }
+  .x_panel{
+    overflow: hidden;
+    max-height: 505px;
+  }
+  .nav-md .container.body .right_col {
+    min-height: 630px;
+    max-height: 630px;
   }
 }
 .tile_count .tile_stats_count .count_bottom i {

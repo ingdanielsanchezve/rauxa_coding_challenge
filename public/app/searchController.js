@@ -11,6 +11,7 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
         sec.maxPages = 16;
         sec.pagesShown = 16;
         sec.actualPage = 0;
+        sec.err = '';
 
     sec.searchGitHub = function() {      
         
@@ -24,6 +25,7 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
                         sec.followers = response.data.followers;
                         sec.totPages  = response.data.pages;
                         sec.pages     = (response.data.pages > sec.maxPages) ? sec.maxPages : response.data.pages;
+                        sec.err       = '';
                     }else{
                         sec.err = response.data;
                         sec.clearData();
