@@ -4800,3 +4800,6 @@ ul.notifications {
     position: relative; /* relative or absolute positioning required by Perfect Scrollbar */
     max-height: 360px;  /* height must be limited to induce scrolling behavior */
 }
+input:invalid {
+    border: 1px solid red;
+}

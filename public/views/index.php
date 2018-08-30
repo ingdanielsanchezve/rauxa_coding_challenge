@@ -88,12 +88,14 @@
 
               <div class="title_right">
                 <div class="col-md-10 col-sm-10 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for..." ng-model="username" ng-keypress="searchGitHubEnter($event)">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" ng-click="searchGitHub()">Go! <i ng-if="searching" class="fa fa-spin fa-spinner"></i>  </button>
-                    </span>
-                  </div>
+                  <form name="searchForm" novalidate ng-submit="searchGitHub()">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search for..." ng-model="username" name="username" ng-keypress="searchGitHubEnter($event)" ng-required="true">
+                      <span class="input-group-btn">
+                          <button class="btn btn-default" type="submit" ng-disabled="searchForm.username.$invalid">Go! <i ng-if="searching" class="fa fa-spin fa-spinner"></i>  </button>
+                      </span>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -145,7 +147,7 @@
                       <ul class="list-unstyled user_data">
                         <li ng-if="user.location"><i class="fa fa-map-marker user-profile-icon"></i> {{user.location}} </li>
 
-                        <li ng-if="user.bio"> <i class="fa fa-briefcase user-profile-icon"></i> {{user.bio}} </li>
+                        <li ng-if="user.bio"> <i class="fa fa-briefcase user-profile-icon"></i> {{user.bio | limitTo: 70 }}{{user.bio.length > 70 ? '...' : ''}} </li>
                         <li ng-if="user.followers"> <i class="fa fa-group user-profile-icon"></i> <strong>{{user.followers}}</strong> Followers </li>
 
                         <li class="m-top-xs" ng-if="user.blog">

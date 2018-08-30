@@ -24,22 +24,24 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
 
     sec.searchGitHub = function() {      
         
-        sec.searching = true;
-        sec.clearData();
-        GitHub.get(sec.username)
-              .then(function (response) {
-                    sec.searching = false;
-                    if ('user' in response.data) {                        
-                        sec.user      = response.data.user;
-                        sec.followers = response.data.followers;
-                        sec.totPages  = response.data.pages;
-                        sec.pages     = (response.data.pages > sec.maxPages) ? sec.maxPages : response.data.pages;
-                        sec.err       = '';
-                    }else{
-                        sec.err = response.data;
-                        sec.clearData();
-                    }
-        });
+        if (typeof sec.username != 'undefined') {
+            sec.searching = true;
+            sec.clearData();
+            GitHub.get(sec.username)
+                .then(function (response) {
+                        sec.searching = false;
+                        if ('user' in response.data) {                        
+                            sec.user      = response.data.user;
+                            sec.followers = response.data.followers;
+                            sec.totPages  = response.data.pages;
+                            sec.pages     = (response.data.pages > sec.maxPages) ? sec.maxPages : response.data.pages;
+                            sec.err       = '';
+                        }else{
+                            sec.err = response.data;
+                            sec.clearData();
+                        }
+            });
+        }
     }
 
     sec.clearData = function () {
@@ -57,13 +59,17 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
 
 
     sec.searchGitHubEnter = function (keyEvent) {
-        if (keyEvent.which === 13)
-            sec.searchGitHubSelected(sec.username);
+        if (keyEvent.which === 13){
+            if (typeof sec.username != 'undefined'){
+                sec.searchGitHubSelected(sec.username);
+            }else{
+                sec.searchForm.username.$invalid = true;
+            }
+        }
     }
 
     sec.getMoreFollowersPages = function(){
         sec.pagesShown++;
-        // sec.firstPage = sec.pagesShown - sec.maxPages;
         sec.getFollowers(sec.pagesShown);
     }
 
