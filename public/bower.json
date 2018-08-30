@@ -1,0 +1,21 @@
+{
+  "name": "rauxa",
+  "description": "rauxa coding challenge",
+  "main": "",
+  "authors": [
+    "Daniel Sánchez"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ingdanielsanchezve/rauxa_coding_challenge",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-tooltips": "tooltips-angular#^1.0.5"
+  }
+}

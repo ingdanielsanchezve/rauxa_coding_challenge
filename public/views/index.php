@@ -13,16 +13,19 @@
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
+    
     <!-- Custom Theme Style -->
     <link href="css/custom.css" rel="stylesheet">
 
+    <!-- Angular CSS -->
+    <link href="bower_components/utatti-perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bower_components/angular-tooltips/dist/angular-tooltips.css" />
+
     <!-- Angular JS -->
     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-repeat-n/dist/angular-repeat-n.min.js"></script>    
-    <link href="bower_components/utatti-perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
     <script src="bower_components/utatti-perfect-scrollbar/dist/perfect-scrollbar.js"></script>
     <script src="bower_components/angular-perfect-scrollbar/src/angular-perfect-scrollbar.js"></script>
+    <script src="bower_components/angular-tooltips/dist/angular-tooltips.js"></script>    
 
     <script src="app/app.js"></script>
     <script src="app/searchController.js"></script>
@@ -90,7 +93,7 @@
                 <div class="col-md-10 col-sm-10 col-xs-12 form-group pull-right top_search">
                   <form name="searchForm" novalidate ng-submit="searchGitHub()">
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search for..." ng-model="username" name="username" ng-keypress="searchGitHubEnter($event)" ng-required="true">
+                      <input type="text" class="form-control" placeholder="Search for GitHub User..." ng-model="username" name="username" ng-keypress="searchGitHubEnter($event)" ng-required="true" title="Type GitHub username" autofocus>
                       <span class="input-group-btn">
                           <button class="btn btn-default" type="submit" ng-disabled="searchForm.username.$invalid">Go! <i ng-if="searching" class="fa fa-spin fa-spinner"></i>  </button>
                       </span>
