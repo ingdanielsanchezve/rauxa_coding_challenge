@@ -14,7 +14,7 @@ As for the connection with GitHub, a controller was created which makes requests
 
 The frontend view is rendered using a HTML file, it was modified the laravel config view file to look for the views in the ```public/views``` directory instead of the ```resource/view``` default laravel directory.
 
-The search of the user is done from the application by means of an asynchronous request with the AngularJs ```$http.get```  which performs the search in 2 phases. First the information of the corresponding user is obtained and later the user's followers.
+The search of the user is done from the application by means of an asynchronous request to the ```/search/:user``` endpoint with the AngularJs ```$http.get```  which performs the search in 2 phases. First the information of the corresponding user is obtained and later the user's followers.
 
 While the searching of users or followers are perfomed the user is notified with alerts in the UI, after the search is done, the alerts are hidden.
 
@@ -37,7 +37,7 @@ To get calculate how many Pages are required to show all followers is required t
 
 For Users with more than 30 followers the paginator will show by default 10 pages and a load more button to show the additional followers.
 
-The Each Paginator Item is created with an ```ng-repeat``` directive to show each page number, when user click each number an asynchronous request is done to the ```/followers/{user}/{page}``` endpoint with the username and the page number, after the followers are returned they are displayed each one with a card info.
+The Each Paginator Item is created with an ```ng-repeat``` directive to show each page number, when user click each number an asynchronous request is done to the ```/followers/:user/:page``` endpoint with the username and the page number, after the followers are returned they are displayed each one with a card info.
 
 
 #### Pagination for users with more than 30 followers
