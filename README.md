@@ -69,8 +69,7 @@ Each Paginator item is created with an ```ng-repeat``` directive to show each pa
 
 ## Testing
 
-### Backend Testing
-Tests created using PHPUnit in Laravel to test this:
+Tests were created using PHPUnit in Laravel to test this:
 
 1. WebSite front is working
 2. GitHub User authenticated data
@@ -79,9 +78,11 @@ Tests created using PHPUnit in Laravel to test this:
 5. GitHub user followers search
 6. GitHub user not have followers
 
-To run tests execute commad ```vendor/bin/phpunit```
+To run tests execute commad ```vendor/bin/phpunit``` in your project root
 
-### Frontend Testing
+##Pendings
+
+If i would have more time to spend on the project i would like to add some additional test for the frontend code to the test app service and controller and to verify to have the correct response expected were returned from Github API.
 
 ## History
 2018-08-30 - First public version

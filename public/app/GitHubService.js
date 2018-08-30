@@ -2,7 +2,7 @@
 
 app.service('GitHub', function($http) {
 
-    this.getUser = function(user){
+    this.getUser = function(){
 
         return $http.get("user");
 
