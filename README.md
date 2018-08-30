@@ -2,7 +2,7 @@
 
 #### Raxua Frontend Coding Challenge Solution
 
-![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_frontend.png)
+![screenshot_frontend](https://user-images.githubusercontent.com/42616141/44802244-36058200-ab89-11e8-84e8-5ecc03b4684e.png)
 
 ## Description of the problem.
 Create a service that allows for a user to search for a GitHub username. On a successful search return, display the user's GitHub handle, follower count, and a list of the user's followers, Additionally for users with many followers Create a "load more" button that, when clicked, fetches the next payload of followers. 
@@ -24,9 +24,10 @@ Depending on the number of followers of the user proceeds to perform the pager t
 
 In case the user has more than 300 followers, a button is added at the end of the pager to show the additional followers since in this way the interface is maintained.
 
-For each GitHub user their avatar, name, username, bio, location and url are displayed. ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/user_profile.png)
+For each GitHub user their avatar, name, username, bio, location and url are displayed. ![user_profile](https://user-images.githubusercontent.com/42616141/44802344-77962d00-ab89-11e8-9c4e-62b3f5df2abb.png)
 
-Each followers is shown on a contact card where you can see your username, avatar and 2 buttons, one to perform the search of that user within the application and another to see the profile on the site. ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/follower_card.png)
+
+Each followers is shown on a contact card where you can see your username, avatar and 2 buttons, one to perform the search of that user within the application and another to see the profile on the site. ![follower_card](https://user-images.githubusercontent.com/42616141/44802362-84b31c00-ab89-11e8-9381-5ee975e41f67.png)
 
 ## Solution URL
 * Link to the hosted application. [Url](https://rauxa.ml)
@@ -43,10 +44,11 @@ Each Paginator item is created with an ```ng-repeat``` directive to show each pa
 
 
 #### Pagination for users with more than 30 followers
- ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_followers_pagination.png)
+ ![screenshot_followers_pagination](https://user-images.githubusercontent.com/42616141/44802298-559caa80-ab89-11e8-81bc-e51db813d707.png)
+
 
  #### Pagination for users with more than 300 followers with button to search more
- ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_massive-followers.png)
+ ![screenshot_massive-followers](https://user-images.githubusercontent.com/42616141/44802329-677e4d80-ab89-11e8-8a56-6f8d7a8bb41a.png)
 
 ## Requirements
 * Laravel Framework for Backend
