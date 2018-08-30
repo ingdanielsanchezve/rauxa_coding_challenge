@@ -2,7 +2,7 @@
 
 #### Raxua Frontend Coding Challege
 
-![screenshot]https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_frontend.png)
+![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_frontend.png)
 
 ## URL
 * [Web Url](https://rauxa.ml)
@@ -12,6 +12,14 @@
 * AngularJs 1.7.3 for Frontend
 * GitHub API consuming
 * Based on Gentellela Alela Admin Dashboard
+
+
+ #### Pagination for users with more than 30 followers
+ ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_followers_pagination.png)
+
+ #### Pagination for users with more than 300 followers with button to search more
+ ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_massive-followers.png)
+
 
 ## Usage
 1. Clone the repo in your local system
