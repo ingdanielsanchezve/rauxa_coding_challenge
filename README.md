@@ -24,9 +24,9 @@ Depending on the number of followers of the user proceeds to perform the pager t
 
 In case the user has more than 300 followers, a button is added at the end of the pager to show the additional followers since in this way the interface is maintained.
 
-For each GitHub user their avatar, name, username, bio, location and url are displayed.
+For each GitHub user their avatar, name, username, bio, location and url are displayed. ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/user_profile.png)
 
-Each followers is shown on a contact card where you can see your username, avatar and 2 buttons, one to perform the search of that user within the application and another to see the profile on the site.
+Each followers is shown on a contact card where you can see your username, avatar and 2 buttons, one to perform the search of that user within the application and another to see the profile on the site. ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/follower_card.png)
 
 ## Solution URL
 * Link to the hosted application. [Url](https://rauxa.ml)
