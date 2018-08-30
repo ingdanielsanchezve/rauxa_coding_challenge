@@ -21,6 +21,16 @@
 4. Type username in search input box
 
 
+## Testing
+
+Tests created using PHPUnit in Laravel to test this:
+
+1. WebSite front is working
+2. GitHub user search
+3. GitHub usersearch user not found
+4. GitHub user followers search
+5. GitHub user not have followers
+
 ## History
 2018-08-30 - First public version
 
