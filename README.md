@@ -2,7 +2,7 @@
 
 #### Raxua Frontend Coding Challege
 
-![screenshot](https://github.com/samuelcarreira/webkit-input-range-fill-lower/raw/master/sample_screenshot.PNG)
+![screenshot]https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_frontend.png)
 
 ## URL
 * [Web Url](https://rauxa.ml)
@@ -16,7 +16,7 @@
 ## Usage
 1. Clone the repo in your local system
 2. Install [Laravel Framework ](https://laravel.com/docs/5.6/installation)
-3. Create local .env file in your root with GitHub ```GITHUB_USER``` and ```GITHUB_TOKEN``` [token](https://github.com/settings/tokens)
+3. Create local .env file in your root with GitHub ```GITHUB_USER``` and ```GITHUB_TOKEN``` [Create GitHub Tokens](https://github.com/settings/tokens)
 3. Server Up with command ```php artisan serve```
 4. Type username in search input box
 
