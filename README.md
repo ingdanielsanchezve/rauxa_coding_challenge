@@ -26,10 +26,9 @@ In case the user has more than 300 followers, a button is added at the end of th
 
 For each GitHub user their avatar, name, username, bio, location and url are displayed.
 
-![user_profile](https://user-images.githubusercontent.com/42616141/44802344-77962d00-ab89-11e8-9c4e-62b3f5df2abb.png)
+![user_profile](https://user-images.githubusercontent.com/42616141/44802950-0e171e00-ab8b-11e8-912a-79fd5f9f264e.png)
 
-
-Each followers is shown on a contact card where you can see your username, avatar and 2 buttons, one to perform the search of that user within the application and another to see the profile on the site. 
+Each followers is shown on a contact card where you can see your username, avatar and 2 buttons, one to perform the search of that user within the application and another to see the profile on the site. In the followers card isn't showm the user name because that field is not provide it in the GitHub ```users/:user/followers``` endpoint.
 
 ![follower_card](https://user-images.githubusercontent.com/42616141/44802362-84b31c00-ab89-11e8-9381-5ee975e41f67.png)
 
