@@ -14,7 +14,9 @@ As for the connection with GitHub, a controller was created which makes requests
 
 The frontend view is rendered using a HTML file, it was modified the laravel config view file to look for the views in the ```public/views``` directory instead of the ```resource/view``` default laravel directory.
 
-The search of the user is done from the application by means of an asynchronous with the AngularJs ```$http.get``` request which performs the search in 2 phases. First the information of the corresponding user is obtained and later the user's followers.
+The search of the user is done from the application by means of an asynchronous request with the AngularJs ```$http.get```  which performs the search in 2 phases. First the information of the corresponding user is obtained and later the user's followers.
+
+While the searching of users or followers are perfomed the user is notified with alerts in the UI, after the search is done, the alerts are hidden.
 
 Depending on the number of followers of the user proceeds to perform the pager that is displayed in the front site because the GitHub's API returns maximum 30 followers in each request.
 
@@ -24,8 +26,25 @@ For each GitHub user their avatar, name, username, bio, location and url are dis
 
 Each followers is shown on a contact card where you can see your username, avatar and 2 buttons, one to perform the search of that user within the application and another to see the profile on the site.
 
-## URL
+## Solution URL
 * Link to the hosted application. [Url](https://rauxa.ml)
+
+## Pagination
+
+For Users with more than 30 followers a paginator is displayed in the front site, this is because GitHub's API returns maximum 30 followers in each request.
+
+To get calculate how many Pages are required to show all followers is required to divide the user followers count returned with the user data by 30 whic is the number of the followers returned by each request, in case the result have decimals and additional page is returned to show the rest ones.
+
+For Users with more than 30 followers the paginator will show by default 10 pages and a load more button to show the additional followers.
+
+The Each Paginator Item is created with an ```ng-repeat``` directive to show each page number, when user click each number an asynchronous request is done to the ```/followers/{user}/{page}``` endpoint with the username and the page number, after the followers are returned they are displayed each one with a card info.
+
+
+#### Pagination for users with more than 30 followers
+ ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_followers_pagination.png)
+
+ #### Pagination for users with more than 300 followers with button to search more
+ ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_massive-followers.png)
 
 ## Requirements
 * Laravel Framework for Backend
@@ -33,18 +52,10 @@ Each followers is shown on a contact card where you can see your username, avata
 * GitHub Users and Followers API endpoints consuming
 * Based on Gentellela Alela Admin Dashboard
 
-
- #### Pagination for users with more than 30 followers
- ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_followers_pagination.png)
-
- #### Pagination for users with more than 300 followers with button to search more
- ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_massive-followers.png)
-
-
 ## Usage
 1. Clone the repo in your local system
 2. Install [Laravel Framework ](https://laravel.com/docs/5.6/installation)
-3. Create local .env file in your root with GitHub ```GITHUB_USER``` and ```GITHUB_TOKEN``` [Create GitHub Tokens](https://github.com/settings/tokens)
+3. Create local .env file in your project root with ```GITHUB_USER``` and ```GITHUB_TOKEN``` variable [Create GitHub Tokens](https://github.com/settings/tokens)
 3. Server Up with command ```php artisan serve```
 4. Type username in search input box
 
