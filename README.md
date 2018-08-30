@@ -8,20 +8,19 @@
 Create a service that allows for a user to search for a GitHub username. On a successful search return, display the user's GitHub handle, follower count, and a list of the user's followers, Additionally for users with many followers Create a "load more" button that, when clicked, fetches the next payload of followers. 
 
 ## Solution
-Para la solución de este coding challenge se utilizo laravel framework para el backend ya que es un framework php bastante popular además que se pudo utilizar para el manejo de las rutas de los API endpoints y para crear test para probar la aplicación.
+For the solution of this coding challenge, the laravel framework for the backend was used since it is a very popular php framework that could also be used to manage the routes of the API endpoints and to create tests to test the application.
 
-En cuanto a la conexión con GitHub se creo un Controlador el cual realiza peticiones al API usando autenticación por medio del nombre de usuario y el token que se debe establecer en el archivo .env de la aplicación.
+As for the connection with GitHub, a controller was created which makes requests to the API using authentication by means of the user name and the token that must be established in the .env file of the application.
 
-La busqueda del usuario se realiza desde la aplicación por medio de una petición asincrona la cual realiza la busqueda en 2 fases. primero se obtienen la información del usuario correspondiente y posteriormente los followers del usuario.
+The search of the user is done from the application by means of an asynchronous request which performs the search in 2 phases. first the information of the corresponding user is obtained and later the followers of the user.
 
-Dependiendo de la cantidad de followers del usuario se procede a realizar el paginador que se muestra en la interfaz debido a que el API de GitHub retorna máximo 30 followers en cada petición.
+Depending on the number of followers of the user proceeds to perform the pager that is displayed in the interface because the API of GitHub returns maximum 30 followers in each request.
 
-En caso de que el usuario posea más de 300 followers se agrego al final del paginador un botón para mostrar los followers adicionales ya que de esta forma se mantiene la interfaz.
+In case the user has more than 300 followers, a button is added at the end of the pager to show the additional followers since in this way the interface is maintained.
 
-Para Cada usuario se muestra su avatar, nombre, nombre de usuario, bio, location and url. 
+For each GitHub user their avatar, name, username, bio, location and url are displayed.
 
-
-Cada followers se muestra en una tarjeta de contacto en la que se puede ver su nombre de usuario, avatar y 2 botones, uno para realizar la busqueda de ese usuario dentro de la aplicación y otro para ver el perfil en el sitio web de GitHub.
+Each followers is shown on a contact card where you can see your username, avatar and 2 buttons, one to perform the search of that user within the application and another to see the profile on the site
 
 ## URL
 * Link to the hosted application. [Url](https://rauxa.ml)
