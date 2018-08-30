@@ -41,7 +41,7 @@ class gitHubController extends Controller
 
     }
 
-    function getGitHubUser($user)
+    function searchGitHubUser($user)
     {
         // VagrantStory
         // guisehn
@@ -73,5 +73,21 @@ class gitHubController extends Controller
 
     }
 
+    function getGitHubUser(){
+
+        $user_info = self::makeGitHubRequest("https://api.github.com/user");
+
+        if (array_key_exists('id', $user_info)) {            
+            
+            $resp = [ 'message' => 'OK', 'user' => $user_info];
+
+        }else{
+            
+            $resp = $user_info;
+
+        }
+
+        return response()->json($resp);
+    }
 
 }

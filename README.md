@@ -65,10 +65,11 @@ The Each Paginator Item is created with an ```ng-repeat``` directive to show eac
 Tests created using PHPUnit in Laravel to test this:
 
 1. WebSite front is working
-2. GitHub user search
-3. GitHub usersearch user not found
-4. GitHub user followers search
-5. GitHub user not have followers
+2. GitHub User authenticated data
+3. GitHub user search
+4. GitHub user search user not found
+5. GitHub user followers search
+6. GitHub user not have followers
 
 ## History
 2018-08-30 - First public version

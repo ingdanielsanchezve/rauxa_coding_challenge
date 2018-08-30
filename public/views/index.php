@@ -32,7 +32,7 @@
     <script src="app/GitHubService.js"></script>
   </head>
 
-  <body class="nav-md" data-ng-app="gitHubSearchApp" data-ng-controller="searchController">
+  <body class="nav-md" data-ng-app="gitHubSearchApp" data-ng-controller="searchController" data-ng-init="getGitHubUser()">
     <div class="container body" ng-cloak>
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -46,11 +46,11 @@
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
-                <img src="images/img.jpeg" alt="..." class="img-circle profile_img">
+                <img ng-src="{{gitHubUser.avatar_url}}" alt="{{gitHubUser.login}}" class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <h2>Daniel Sánchez</h2>
-                <h2>Computer Engineer</h2>
+                <h2>{{gitHubUser.name}}</h2>
+                <a ng-href="{{gitHubUser.html_url}}" target="_blank">{{gitHubUser.login}}</a>
               </div>
             </div>
             <!-- /menu profile quick info -->        
@@ -69,7 +69,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpeg" alt="">Daniel Sánchez
+                    <img ng-src="{{gitHubUser.avatar_url}}" alt="{{gitHubUser.login}}">{{gitHubUser.name}}
                   </a>
                 </li>
 
@@ -223,6 +223,12 @@
         </div>
         <!-- /page content -->
 
+        <footer>
+          <div class="pull-right">
+            Developed by: <strong>Daniel Sánchez</strong>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
         
       </div>
     </div>

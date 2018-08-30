@@ -20,6 +20,14 @@ class GitHubSearchTest extends TestCase
              ->assertSee('GitHub Users Search');
     }
 
+    function test_GitHub_User()
+    {
+        $this->get('/user')
+             ->assertStatus(200)
+             ->assertJsonFragment(["message" => "OK"]);
+    }
+    }
+
     function test_GitHub_User_Search()
     {
         $this->get('/search/ingdanielsanchezve')

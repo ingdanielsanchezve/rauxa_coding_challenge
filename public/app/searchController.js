@@ -44,6 +44,13 @@ app.controller('searchController', ['$scope', '$http', 'GitHub',
         }
     }
 
+    sec.getGitHubUser = function() {        
+        GitHub.getUser()
+            .then(function (response) {                        
+                sec.gitHubUser = response.data.user;
+        });
+    }
+
     sec.clearData = function () {
         sec.user = '';
         sec.followers = '';
