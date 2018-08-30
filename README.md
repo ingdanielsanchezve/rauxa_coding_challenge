@@ -33,7 +33,7 @@ Each followers is shown on a contact card where you can see your username, avata
 
 For Users with more than 30 followers a paginator is displayed in the front site, this is because GitHub's API returns maximum 30 followers in each request.
 
-To get calculate how many Pages are required to show all followers is required to divide the user followers count returned with the user data by 30 whic is the number of the followers returned by each request, in case the result have decimals and additional page is returned to show the rest ones.
+To calculate how many Pages are required to show all followers is required to divide the user followers count returned with the user data by 30 whic is the number of the followers returned by each request, in case the result have decimals and additional page is returned to show the rest ones.
 
 For Users with more than 30 followers the paginator will show by default 10 pages and a load more button to show the additional followers.
 
@@ -58,7 +58,6 @@ Each Paginator item is created with an ```ng-repeat``` directive to show each pa
 3. Create local .env file in your project root with ```GITHUB_USER``` and ```GITHUB_TOKEN``` variable [Create GitHub Tokens](https://github.com/settings/tokens)
 3. Server Up with command ```php artisan serve```
 4. Type username in search input box
-
 
 ## Testing
 
