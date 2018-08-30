@@ -10,7 +10,7 @@ Create a service that allows for a user to search for a GitHub username. On a su
 ## URL
 * Link to the hosted application. [Url](https://rauxa.ml)
 
-## Features
+## Requirements
 * Laravel Framework for Backend
 * AngularJs 1.7.3 for Frontend
 * GitHub Users and Followers API endpoints consuming
