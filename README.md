@@ -7,6 +7,22 @@
 ## Description of the problem.
 Create a service that allows for a user to search for a GitHub username. On a successful search return, display the user's GitHub handle, follower count, and a list of the user's followers, Additionally for users with many followers Create a "load more" button that, when clicked, fetches the next payload of followers. 
 
+## Solution
+Para la solución de este coding challenge se utilizo laravel framework para el backend ya que es un framework php bastante popular además que se pudo utilizar para el manejo de las rutas de los API endpoints y para crear test para probar la aplicación.
+
+En cuanto a la conexión con GitHub se creo un Controlador el cual realiza peticiones al API usando autenticación por medio del nombre de usuario y el token que se debe establecer en el archivo .env de la aplicación.
+
+La busqueda del usuario se realiza desde la aplicación por medio de una petición asincrona la cual realiza la busqueda en 2 fases. primero se obtienen la información del usuario correspondiente y posteriormente los followers del usuario.
+
+Dependiendo de la cantidad de followers del usuario se procede a realizar el paginador que se muestra en la interfaz debido a que el API de GitHub retorna máximo 30 followers en cada petición.
+
+En caso de que el usuario posea más de 300 followers se agrego al final del paginador un botón para mostrar los followers adicionales ya que de esta forma se mantiene la interfaz.
+
+Para Cada usuario se muestra su avatar, nombre, nombre de usuario, bio, location and url. 
+
+
+Cada followers se muestra en una tarjeta de contacto en la que se puede ver su nombre de usuario, avatar y 2 botones, uno para realizar la busqueda de ese usuario dentro de la aplicación y otro para ver el perfil en el sitio web de GitHub.
+
 ## URL
 * Link to the hosted application. [Url](https://rauxa.ml)
 
