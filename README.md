@@ -64,11 +64,12 @@ Each Paginator item is created with an ```ng-repeat``` directive to show each pa
 2. Install [Laravel Framework ](https://laravel.com/docs/5.6/installation)
 3. Install project dependencies ```composer install```
 4. Create local .env file in your project root with ```GITHUB_USER``` and ```GITHUB_TOKEN``` variable [Create GitHub Tokens](https://github.com/settings/tokens)
-5. Server Up with command ```php artisan serve```
+5. Server Up with executing command ```php artisan serve```
 6. Type username in search input box
 
 ## Testing
 
+### Backend Testing
 Tests created using PHPUnit in Laravel to test this:
 
 1. WebSite front is working
@@ -77,6 +78,10 @@ Tests created using PHPUnit in Laravel to test this:
 4. GitHub user search user not found
 5. GitHub user followers search
 6. GitHub user not have followers
+
+To run tests execute commad ```vendor/bin/phpunit```
+
+### Frontend Testing
 
 ## History
 2018-08-30 - First public version
