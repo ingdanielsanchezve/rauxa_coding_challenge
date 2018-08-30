@@ -1,6 +1,6 @@
-# Raxua Frontend Coding Challenge Solution
+# Rauxa FE Coding Challenge Solution
 
-#### Raxua Frontend Coding Challenge Solution
+#### Rauxa FE Coding Challenge Solution
 
 ![screenshot_frontend](https://user-images.githubusercontent.com/42616141/44802244-36058200-ab89-11e8-84e8-5ecc03b4684e.png)
 
@@ -24,10 +24,12 @@ Depending on the number of followers of the user proceeds to perform the pager t
 
 In case the user has more than 300 followers, a button is added at the end of the pager to show the additional followers since in this way the interface is maintained.
 
-For each GitHub user their avatar, name, username, bio, location and url are displayed. ![user_profile](https://user-images.githubusercontent.com/42616141/44802344-77962d00-ab89-11e8-9c4e-62b3f5df2abb.png)
+For each GitHub user their avatar, name, username, bio, location and url are displayed.
+![user_profile](https://user-images.githubusercontent.com/42616141/44802344-77962d00-ab89-11e8-9c4e-62b3f5df2abb.png)
 
 
-Each followers is shown on a contact card where you can see your username, avatar and 2 buttons, one to perform the search of that user within the application and another to see the profile on the site. ![follower_card](https://user-images.githubusercontent.com/42616141/44802362-84b31c00-ab89-11e8-9381-5ee975e41f67.png)
+Each followers is shown on a contact card where you can see your username, avatar and 2 buttons, one to perform the search of that user within the application and another to see the profile on the site. 
+![follower_card](https://user-images.githubusercontent.com/42616141/44802362-84b31c00-ab89-11e8-9381-5ee975e41f67.png)
 
 ## Solution URL
 * Link to the hosted application. [Url](https://rauxa.ml)
@@ -44,7 +46,7 @@ Each Paginator item is created with an ```ng-repeat``` directive to show each pa
 
 
 #### Pagination for users with more than 30 followers
- ![screenshot_followers_pagination](https://user-images.githubusercontent.com/42616141/44802298-559caa80-ab89-11e8-81bc-e51db813d707.png)
+ ![screenshot_followers_pagination](https://user-images.githubusercontent.com/42616141/44802674-5b46c000-ab8a-11e8-8a4a-6a782855536c.png)
 
 
  #### Pagination for users with more than 300 followers with button to search more
