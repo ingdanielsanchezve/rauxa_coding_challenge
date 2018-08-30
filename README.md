@@ -14,6 +14,8 @@ As for the connection with GitHub, a controller was created which makes requests
 
 The frontend view is rendered using a HTML file, it was modified the laravel config view file to look for the views in the ```public/views``` directory instead of the ```resource/view``` default laravel directory.
 
+On Page load a request to the ```/user``` endpoint is made to get the authenticated user data and show user avatar, name, username and url link to the ser GitHub profile page.
+
 The search of the user is done from the application by means of an asynchronous request to the ```/search/:user``` endpoint with the AngularJs ```$http.get```  which performs the search in 2 phases. First the information of the corresponding user is obtained and later the user's followers.
 
 While the searching of users or followers are perfomed the user is notified with alerts in the UI, after the search is done, the alerts are hidden.
