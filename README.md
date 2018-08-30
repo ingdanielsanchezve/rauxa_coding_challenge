@@ -13,7 +13,7 @@ Create a service that allows for a user to search for a GitHub username. On a su
 ## Features
 * Laravel Framework for Backend
 * AngularJs 1.7.3 for Frontend
-* GitHub API consuming
+* GitHub Users and Followers API endpoints consuming
 * Based on Gentellela Alela Admin Dashboard
 
 
