@@ -62,7 +62,7 @@ Each Paginator item is created with an ```ng-repeat``` directive to show each pa
 ## Usage
 1. Clone the repo in your local system
 2. Install [Laravel Framework ](https://laravel.com/docs/5.6/installation)
-3. Install project dependencies ```composer update```
+3. Install project dependencies ```composer install```
 4. Create local .env file in your project root with ```GITHUB_USER``` and ```GITHUB_TOKEN``` variable [Create GitHub Tokens](https://github.com/settings/tokens)
 5. Server Up with command ```php artisan serve```
 6. Type username in search input box
