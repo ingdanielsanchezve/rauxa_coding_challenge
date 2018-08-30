@@ -37,7 +37,7 @@ To get calculate how many Pages are required to show all followers is required t
 
 For Users with more than 30 followers the paginator will show by default 10 pages and a load more button to show the additional followers.
 
-The Each Paginator Item is created with an ```ng-repeat``` directive to show each page number, when user click each number an asynchronous request is done to the ```/followers/:user/:page``` endpoint with the username and the page number, after the followers are returned they are displayed each one with a card info.
+Each Paginator item is created with an ```ng-repeat``` directive to show each page number, when user click each number an asynchronous request is done to the ```/followers/:user/:page``` endpoint with the username and the page number, after the followers are returned they are displayed each one with a card info.
 
 
 #### Pagination for users with more than 30 followers
