@@ -1,11 +1,14 @@
-# Raxua Frontend Coding Challege
+# Raxua Frontend Coding Challenge Solution
 
-#### Raxua Frontend Coding Challege
+#### Raxua Frontend Coding Challenge Solution
 
 ![screenshot](https://github.com/ingdanielsanchezve/rauxa_coding_challenge/tree/master/public/images/screenshots/Screenshot_frontend.png)
 
+## Description of the problem.
+Create a service that allows for a user to search for a GitHub username. On a successful search return, display the user's GitHub handle, follower count, and a list of the user's followers, Additionally for users with many followers Create a "load more" button that, when clicked, fetches the next payload of followers. 
+
 ## URL
-* [Web Url](https://rauxa.ml)
+* Link to the hosted application. [Url](https://rauxa.ml)
 
 ## Features
 * Laravel Framework for Backend
