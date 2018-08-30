@@ -26,7 +26,6 @@ class GitHubSearchTest extends TestCase
              ->assertStatus(200)
              ->assertJsonFragment(["message" => "OK"]);
     }
-    }
 
     function test_GitHub_User_Search()
     {

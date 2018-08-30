@@ -26,6 +26,7 @@
     <script src="bower_components/utatti-perfect-scrollbar/dist/perfect-scrollbar.js"></script>
     <script src="bower_components/angular-perfect-scrollbar/src/angular-perfect-scrollbar.js"></script>
     <script src="bower_components/angular-tooltips/dist/angular-tooltips.js"></script>    
+    <script src=""></script>
 
     <script src="app/app.js"></script>
     <script src="app/searchController.js"></script>
