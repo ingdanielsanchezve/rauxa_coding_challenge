@@ -80,7 +80,7 @@ Tests were created using PHPUnit in Laravel to test this:
 
 To run tests execute commad ```vendor/bin/phpunit``` in your project root
 
-##Pendings
+## Pendings
 
 If i would have more time to spend on the project i would like to add some additional test for the frontend code to the test app service and controller and to verify to have the correct response expected were returned from Github API.
 
